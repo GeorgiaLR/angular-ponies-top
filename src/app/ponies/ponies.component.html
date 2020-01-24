@@ -1,0 +1,9 @@
+<h2>My Ponies</h2>
+<ul class="ponies">
+  <li *ngFor="let pony of ponies"
+    [class.selected]="pony === selectedPony"
+    (click)="onSelect(pony)">
+    <span class="badge">{{pony.id}}</span> {{pony.name}}
+  </li>
+</ul>
+<app-pony-detail [pony]="selectedPony"></app-pony-detail>
