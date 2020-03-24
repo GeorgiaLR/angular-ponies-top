@@ -1,0 +1,9 @@
+<h3>Top Ponies</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let pony of ponies" class="col-1-4"
+  routerLink="/detail/{{pony.id}}">
+    <div class="module pony">
+      <h4>{{pony.name}}</h4>
+    </div>
+  </a>
+</div>

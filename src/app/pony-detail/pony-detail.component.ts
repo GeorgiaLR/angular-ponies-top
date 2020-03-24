@@ -1,4 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+
+import { PonyService }  from '../pony.service';
 import { Pony } from '../pony';
 
 @Component({
@@ -9,7 +14,9 @@ import { Pony } from '../pony';
 
 export class PonyDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private ponyService: PonyService,
+    private location: Location) { }
   
   @Input() pony: Pony;
 
